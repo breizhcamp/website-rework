@@ -1,4 +1,8 @@
 node_modules
+/.pnpm-store
+
+# Tooling
+.jj
 
 # Output
 .output
