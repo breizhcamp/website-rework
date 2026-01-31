@@ -1,4 +1,4 @@
-# Site BreizhCamp 
+# Site BreizhCamp
 
 Le site Web du BreizCamp est un site statique, généré avec [Svelte](https://svelte.dev/). Svelte est un framework web qui utilise un compilateur pour vous permettre d'écrire des composants concis, en utilisant les API natives des langages que vous connaissez déjà - HTML, CSS et JavaScript !
 

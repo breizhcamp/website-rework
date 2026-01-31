@@ -1,0 +1,7 @@
+@font-face {
+	font-family: Inter;
+	font-stretch: normal;
+	font-style: normal;
+	font-display: fallback;
+	src: url('/inter.woff2') format('woff2');
+}

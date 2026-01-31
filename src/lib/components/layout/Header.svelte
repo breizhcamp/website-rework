@@ -12,7 +12,7 @@
 		<nav>
 			<ul class="nav-list">
 				<li><a href="/">Accueil</a></li>
-				<li><a href="/#programme">Programme</a></li>
+				<li><a href="/programme">Programme</a></li>
 				<li><a href="/#intervenants">Intervenants</a></li>
 				<li><a href="/#sponsors">Sponsors</a></li>
 				<li><a href="/#infos-pratiques">Infos pratiques</a></li>

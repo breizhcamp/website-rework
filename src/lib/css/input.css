@@ -1,0 +1,12 @@
+.input-field {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid var(--neutral-200);
+	border-radius: 6px;
+	font-size: 1rem;
+}
+.input-field:focus {
+	border-color: var(--violet);
+	outline: 2px solid var(--violet);
+	outline-offset: 1px;
+}

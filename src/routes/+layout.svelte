@@ -1,30 +1,27 @@
 <script lang="ts">
-	import '$lib/css/index.css';
-	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
+	import '$lib/css/index.css';
 
 	let { children } = $props();
 </script>
 
-<div class="page-wrapper">
-	<Header />
+<Header />
+<main>
 	{@render children?.()}
-	<Footer />
-</div>
+</main>
+<Footer />
 
 <style>
-	.page-wrapper {
+	main {
 		max-width: 1440px;
 		margin: 0 auto;
+		padding: 1.5rem;
 	}
 
-	:global(main) {
-		padding: 3rem;
-	}
-
-	@media (max-width: 900px) {
-		:global(main) {
-			padding: 1.5rem;
+	@media (min-width: 768px) {
+		main {
+			padding: 3rem;
 		}
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/ui/Button.svelte';
 	import Badge from '$lib/components/ui/Badge.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 
 	// Données
@@ -18,132 +18,130 @@
 	<title>Design System - BreizhCamp</title>
 </svelte:head>
 
-<main>
-	<section class="hero">
-		<h1>Design System <span class="text-gradient">BreizhCamp</span></h1>
-		<p class="subtitle">Système de design complet...</p>
-		<div class="tags">
-			<Badge color="yellow">WCAG 2.1 AA</Badge>
-			<Badge color="grey">Éco-conçu</Badge>
-			<Badge color="orange">Mobile-first</Badge>
-		</div>
-	</section>
+<section class="hero">
+	<h1>Design System <span class="text-gradient">BreizhCamp</span></h1>
+	<p class="subtitle">Système de design complet...</p>
+	<div class="tags">
+		<Badge color="yellow">WCAG 2.1 AA</Badge>
+		<Badge color="grey">Éco-conçu</Badge>
+		<Badge color="orange">Mobile-first</Badge>
+	</div>
+</section>
 
-	<section>
-		<h2>Palette de couleurs</h2>
-		<h3>Couleurs de marque</h3>
-		<div class="color-grid brand-colors">
-			{#each brandColors as c (c.name)}
-				<div class="color-card" style="background: {c.bg}; color: {c.text};">
-					<span>{c.name}</span><span class="opacity-80 text-sm">{c.hex}</span>
-				</div>
-			{/each}
-		</div>
+<section>
+	<h2>Palette de couleurs</h2>
+	<h3>Couleurs de marque</h3>
+	<div class="color-grid brand-colors">
+		{#each brandColors as c (c.name)}
+			<div class="color-card" style="background: {c.bg}; color: {c.text};">
+				<span>{c.name}</span><span class="opacity-80 text-sm">{c.hex}</span>
+			</div>
+		{/each}
+	</div>
 
-		<h3>Couleurs neutres</h3>
-		<div class="color-grid neutral-colors">
-			{#each neutralColors as n (n)}
-				<div class="neutral-card shade-{n}"><span>{n}</span></div>
-			{/each}
-		</div>
-	</section>
+	<h3>Couleurs neutres</h3>
+	<div class="color-grid neutral-colors">
+		{#each neutralColors as n (n)}
+			<div class="neutral-card shade-{n}"><span>{n}</span></div>
+		{/each}
+	</div>
+</section>
 
-	<section>
-		<h2>Typographie</h2>
-		<div class="grid-2">
-			<div>
-				<p class="label">Titres</p>
-				<h1>Titre H1</h1>
-				<h2>Titre H2</h2>
-				<h3>Titre H3</h3>
-			</div>
-			<div>
-				<p class="label">Corps</p>
-				<p class="text-large">Texte large...</p>
-				<p class="text-base">Texte de base...</p>
-			</div>
+<section>
+	<h2>Typographie</h2>
+	<div class="grid-2">
+		<div>
+			<p class="label">Titres</p>
+			<h1>Titre H1</h1>
+			<h2>Titre H2</h2>
+			<h3>Titre H3</h3>
 		</div>
-	</section>
+		<div>
+			<p class="label">Corps</p>
+			<p class="text-large">Texte large...</p>
+			<p class="text-base">Texte de base...</p>
+		</div>
+	</div>
+</section>
 
-	<section>
-		<h2>Boutons</h2>
-		<div class="grid-3">
-			<div>
-				<p class="label">Primaires</p>
-				<Button variant="primary">Primaire</Button>
-			</div>
-			<div>
-				<p class="label">Secondaires</p>
-				<Button variant="secondary">Secondaire</Button>
-				<div style="margin-top:1rem"><Button variant="tertiary">Réserver</Button></div>
-			</div>
-			<div>
-				<p class="label">Icônes</p>
-				<Button variant="icon-primary">
-					<svg
-						width="16"
-						height="16"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<rect x="2" y="4" width="20" height="16" rx="2" />
-						<path d="M7 8h10M7 12h10M7 16h6" />
-					</svg>
-					Acheter
-				</Button>
-				<div style="margin-top:1rem">
-					<Button variant="link">En savoir plus</Button>
-				</div>
+<section>
+	<h2>Boutons</h2>
+	<div class="grid-3">
+		<div>
+			<p class="label">Primaires</p>
+			<Button variant="primary">Primaire</Button>
+		</div>
+		<div>
+			<p class="label">Secondaires</p>
+			<Button variant="secondary">Secondaire</Button>
+			<div style="margin-top:1rem"><Button variant="tertiary">Réserver</Button></div>
+		</div>
+		<div>
+			<p class="label">Icônes</p>
+			<Button variant="icon-primary">
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<rect x="2" y="4" width="20" height="16" rx="2" />
+					<path d="M7 8h10M7 12h10M7 16h6" />
+				</svg>
+				Acheter
+			</Button>
+			<div style="margin-top:1rem">
+				<Button variant="link">En savoir plus</Button>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section>
-		<h2>Cartes</h2>
-		<div class="grid-3">
-			<Card align="center">
+<section>
+	<h2>Cartes</h2>
+	<div class="grid-3">
+		<Card align="center">
+			<img
+				src="https://i.pravatar.cc/150?u=marie"
+				alt="Portrait de Marie Dupont"
+				class="avatar"
+			/>
+			<h3>Marie Dupont</h3>
+			<p class="text-sm text-neutral-500">Senior Developer</p>
+			<Badge color="pink">React</Badge>
+		</Card>
+
+		<Card align="left">
+			<div class="flex justify-between w-full mb-2">
+				<Badge color="yellow" size="sm">14:30</Badge>
+				<span class="text-sm text-neutral-400">45 min</span>
+			</div>
+			<h3>Intro React 18</h3>
+			<p class="text-sm mb-4">Découvrez les fonctionnalités...</p>
+			<div class="flex items-center gap-2">
 				<img
-					src="https://i.pravatar.cc/150?u=marie"
-					alt="Portrait de Marie Dupont"
-					class="avatar"
+					src="https://i.pravatar.cc/150?u=pierre"
+					alt="Portrait de Pierre Martin"
+					class="avatar-sm"
 				/>
-				<h3>Marie Dupont</h3>
-				<p class="text-sm text-neutral-500">Senior Developer</p>
-				<Badge color="pink">React</Badge>
-			</Card>
-
-			<Card align="left">
-				<div class="flex justify-between w-full mb-2">
-					<Badge color="yellow" size="sm">14:30</Badge>
-					<span class="text-sm text-neutral-400">45 min</span>
-				</div>
-				<h3>Intro React 18</h3>
-				<p class="text-sm mb-4">Découvrez les fonctionnalités...</p>
-				<div class="flex items-center gap-2">
-					<img
-						src="https://i.pravatar.cc/150?u=pierre"
-						alt="Portrait de Pierre Martin"
-						class="avatar-sm"
-					/>
-					<span class="text-sm">Pierre Martin</span>
-				</div>
-			</Card>
-		</div>
-	</section>
-
-	<section>
-		<h2>Formulaires</h2>
-		<form class="form-stack">
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" id="email" bind:value={formData.email} class="input-field" />
+				<span class="text-sm">Pierre Martin</span>
 			</div>
-			<Button variant="primary" fullWidth={true} type="submit">Envoyer</Button>
-		</form>
-	</section>
-</main>
+		</Card>
+	</div>
+</section>
+
+<section>
+	<h2>Formulaires</h2>
+	<form class="form-stack">
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" id="email" bind:value={formData.email} class="input-field" />
+		</div>
+		<Button variant="primary" fullWidth={true} type="submit">Envoyer</Button>
+	</form>
+</section>
 
 <style>
 	section {
@@ -274,19 +272,6 @@
 		font-size: 0.9rem;
 		font-weight: 500;
 	}
-	.input-field {
-		width: 100%;
-		padding: 0.8rem;
-		border: 1px solid var(--neutral-200);
-		border-radius: 6px;
-		font-size: 1rem;
-	}
-	.input-field:focus {
-		border-color: var(--violet);
-		outline: 2px solid var(--violet);
-		outline-offset: 1px;
-	}
-
 	.flex {
 		display: flex;
 	}
